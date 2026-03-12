@@ -1,2 +1,43 @@
-# Basic-automation
-Collection of simple automation scripts created to simplify small tasks and improve daily productivity.
+# Log Processing Script
+
+Hello! I created a small script to read a file where the dictionary **`logs`** represents the use of the following command:
+
+```python
+with open("path") as file:
+```
+
+The script reads the file content and processes the information contained in the logs.
+
+<img width="100%" src="https://user-images.githubusercontent.com/8989346/136876224-bac0a91f-63a8-45ea-b5fc-6618bddf2335.gif" />
+
+## Dictionaries Used
+
+
+We created these dictionaries to store the results obtained while iterating through the **logs dictionary/file**.  
+This allows the script to organize the information and later manipulate the data to generate warnings or alerts inside the system.
+
+The dictionaries used are:
+
+```python
+portscan = {}
+bruteforce = {}
+users = {}
+```
+
+### Description
+
+- **portscan** → Stores possible port scanning activities detected in the logs.  
+- **bruteforce** → Stores possible brute force attempts detected in the logs.  
+- **users** → Stores user-related information extracted from the logs.
+
+These structures help keep the data organized and make it easier to analyze suspicious activity.
+
+<img width="100%" src="https://user-images.githubusercontent.com/8989346/136876224-bac0a91f-63a8-45ea-b5fc-6618bddf2335.gif" />
+
+### Temporary Variables
+
+During the processing of the logs, we store data in temporary variables to maintain control of the file structure, its indexes, and its keys.
+
+While the script iterates through the `logs` dictionary/file, the values are temporarily stored depending on the value of **X** at the moment the iteration occurs.
+
+This allows the script to correctly identify the context of the data being processed and store the information in the appropriate dictionari
