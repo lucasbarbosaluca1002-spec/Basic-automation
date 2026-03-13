@@ -1,5 +1,15 @@
 # Log Processing Script
 
+
+This repository contains **two versions of a log analysis program** created as part of my learning process with Python and basic security automation.
+
+The first program is a **simpler script** that simulates a log file using a dictionary inside the code.  
+It was created to practice logic, loops, dictionaries, and basic detection techniques such as brute force and port scan detection.
+
+The second version, located inside the **Project/** folder, is a more complete implementation that **reads logs from a real file (`logs.json`)** and processes them automatically.
+
+This structure demonstrates the progression from a **simple simulated environment** to a **script capable of reading and analyzing real log files**.
+
 Hello! I created a small script to read a file where the dictionary **`logs`** represents the use of the following command:
 
 ```python
