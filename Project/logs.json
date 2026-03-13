@@ -1,0 +1,9 @@
+[
+ {"ip": "10.0.0.1", "status": "fail", "porta": 22, "usuario": "admin"},
+ {"ip": "10.0.0.1", "status": "fail", "porta": 22, "usuario": "root"},
+ {"ip": "10.0.0.1", "status": "fail", "porta": 22, "usuario": "guest"},
+ {"ip": "10.0.0.2", "status": "ok", "porta": 80, "usuario": "ana"},
+ {"ip": "10.0.0.3", "status": "fail", "porta": 21, "usuario": "carlos"},
+ {"ip": "10.0.0.3", "status": "fail", "porta": 22, "usuario": "carlos"},
+ {"ip": "10.0.0.3", "status": "fail", "porta": 23, "usuario": "carlos"}
+]
