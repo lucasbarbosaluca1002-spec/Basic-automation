@@ -48,6 +48,64 @@ These structures help keep the data organized and make it easier to analyze susp
 
 During the processing of the logs, we store data in temporary variables to maintain control of the file structure, its indexes, and its keys.
 
-While the script iterates through the `logs` dictionary/file, the values are temporarily stored depending on the value of **X** at the moment the iteration occurs.
+While the script iterates through the logs dictionary/file, the values are temporarily stored depending on the value of X at the moment the iteration occurs.
 
-This allows the script to correctly identify the context of the data being processed and store the information in the appropriate dictionari
+```python
+for x in logs:
+    ip = x["ip"]
+    status = x["status"]
+    porta = x["porta"]
+    usuario = x["usuario"
+```
+This allows the script to correctly identify the context of the data being processed and store the information in the appropriate dictionaries.
+
+<img width="100%" src="https://user-images.githubusercontent.com/8989346/136876224-bac0a91f-63a8-45ea-b5fc-6618bddf2335.gif" />
+
+### Detection Logic
+
+he script analyzes the logs to detect possible suspicious activities:
+
+Brute Force Detection
+
+If an IP address generates multiple failed login attempts, the script identifies it as a possible brute force attack.
+
+Port Scan Detection
+
+If an IP connects to multiple different ports, the script flags it as a potential port scanning activity.
+
+User Enumeration
+
+If an IP attempts to authenticate using multiple different usernames, the script can detect possible user enumeration attempts.
+
+### Output
+
+When suspicious activity is detected, the script generates alerts such as:
+
+```python
+Possible BruteForce: 10.0.0.1
+Possible PortScan: 10.0.0.3
+Possible User Enumeration: 10.0.0.2
+```
+
+These alerts can also be written to an output file for further analysis.
+
+<img width="100%" src="https://user-images.githubusercontent.com/8989346/136876224-bac0a91f-63a8-45ea-b5fc-6618bddf2335.gif" />
+
+
+### Project Structure
+
+```python
+Basic-automation
+│
+├─ Mini-Analyst.py
+│
+├─ Project
+│   ├─ Project.py
+│   ├─ logs.json
+│   └─ Alertas.txt
+│
+└─ README.md
+```
+Mini-Analyst.py → Simple simulated log analyzer
+
+Project/ → More complete version using real log filess
